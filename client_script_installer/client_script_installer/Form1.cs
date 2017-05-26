@@ -41,9 +41,9 @@ namespace client_script_installer
                 if (openFileDialog1.FileName.Contains("csgo.exe"))
                 {
                     pathToScript = openFileDialog1.FileName.Replace("csgo.exe", "csgo\\cfg\\gamestate_integration_consolesample.cfg");
-                    MessageBox.Show("csgo\\cfg\\gamestate_integration_consolesample.cfg");
+                    string scriptPayload = "Oh hello.";
+                    System.IO.File.WriteAllText(pathToScript, scriptPayload);
                     MessageBox.Show("OK");
-                    MessageBox.Show(pathToScript);
                 }
                 else
                 {
